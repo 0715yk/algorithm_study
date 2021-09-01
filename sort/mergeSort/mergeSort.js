@@ -1,4 +1,4 @@
-// 재귀함수로 합병정렬 구현하기
+// 재귀함수로 합병정렬 구현하기(JS)
 
 const mergeSort = (l) => {
     if (l.length <= 1) return l;
