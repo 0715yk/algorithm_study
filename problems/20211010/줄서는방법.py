@@ -87,3 +87,31 @@ def solution(n, k):
 
 # 어떻게 될 것 같았으나.. 실패..!
 
+# 결국 3일 뒤에나 풀어냈다.. 2021/10/13
+import math
+
+def solution(n, k):
+    answer = []
+    l = [i for i in range(1,n+1)]
+    b = k
+    a = math.factorial(len(l))
+    length = len(l)
+    while len(answer) != n:
+        a //= length
+        remain = b % a
+        
+        if remain == 0:
+            idx = (b//a) - 1
+        else:
+            idx = b//a 
+        
+        answer.append(l[idx])
+        l.pop(idx)
+        
+        if remain == 0:
+            b = a
+        else:
+            b = remain
+        length -= 1
+        
+    return answer
