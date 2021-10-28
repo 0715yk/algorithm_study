@@ -36,3 +36,7 @@ def solution(maps):
                     queue.append(way)
         
     return -1
+
+
+
+
